@@ -19,7 +19,7 @@ export function reactiveInterval(interval = 1000) {
 export function wrapFunction(fn, interval) {
   return function(...args) {
     reactiveInterval(interval)
-    fn.apply(this, args)
+    return fn.apply(this, args)
   }
 }
 
